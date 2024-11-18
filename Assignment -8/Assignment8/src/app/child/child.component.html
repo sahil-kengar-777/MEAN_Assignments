@@ -1,0 +1,6 @@
+<input #input1 type="text">
+<button (click)="sendData(input1.value)">Send Data</button>
+
+<h1> Parent Message : {{parentData}}</h1>
+
+<button (click)="ChildToParent()">Click Me</button>

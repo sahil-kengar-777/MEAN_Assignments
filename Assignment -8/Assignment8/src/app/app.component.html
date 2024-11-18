@@ -1,0 +1,15 @@
+
+<h1>Demonstration of Inter Component Communication</h1>
+<h2>{{ChildValue}}</h2>
+<app-child  [parentData]="Msg" (event) = "ChildData = $event" (myEvent) = "ChildValue = $event">
+</app-child>
+<h2>Child Message : {{ChildData}}</h2>
+
+<input [(ngModel)] = "inputVal" type="text" name="textBox1">
+<h2>length of the entered Data is : {{inputVal.length}}</h2>
+
+<input id="textBox2" type="text" name="textBox2" >
+<h2>length of the Input Text is : {{inputData.length}}</h2>
+
+<router-outlet />
+
