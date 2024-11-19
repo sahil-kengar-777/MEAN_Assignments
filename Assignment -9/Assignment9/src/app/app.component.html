@@ -1,0 +1,13 @@
+<h1>Demonstration of Custom Pipe</h1>
+<h2>Name is : {{Name}}</h2>
+<h2>Name in Reverse Format is : {{Name | myRev}}</h2>
+
+<h1>Addition using MyAdd pipe is : {{ 8 | myAdd : 3}}</h1>
+<h1>Multipication using MyMult pipe is : {{ 7 | myMult : 3}}</h1>
+
+<h2>check number {{no}} is Even,Odd,Prime,Perfect</h2>
+<h2>For Even check result is : {{no | marvellousChk : "Even"}}</h2>
+<h2>For Odd check result is : {{no | marvellousChk : "Odd"}}</h2>
+<h2>For Prime number check result is : {{no | marvellousChk : "Prime"}}</h2>
+<h2>For Perfect number result is : {{no | marvellousChk : "Perfect"}}</h2>
+<router-outlet />
