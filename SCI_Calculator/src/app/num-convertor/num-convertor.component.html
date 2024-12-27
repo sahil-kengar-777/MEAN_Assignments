@@ -1,0 +1,31 @@
+<div class="converter-container">
+    <h2>Number System Conversion</h2>
+    <div class="options">
+      <label class="d-flex">from</label>
+      <div class="d-flex justify-content-evenly">
+        <label><input type="radio" name="from" [(ngModel)]="fromBase" value="2" class="form-check-input"/> Binary</label>
+        <label><input type="radio" name="from" [(ngModel)]="fromBase" value="8" class="form-check-input"/> Octal</label>
+        <label><input type="radio" name="from" [(ngModel)]="fromBase" value="10" class="form-check-input" /> Decimal</label>
+        <label><input type="radio" name="from" [(ngModel)]="fromBase" value="16" class="form-check-input" /> Hex</label>
+      </div>
+      <label class="d-flex">to</label>
+      <div class="d-flex justify-content-evenly">
+        <label><input type="radio" name="to" [(ngModel)]="toBase" value="2"  class="form-check-input"/> Binary</label>
+        <label><input type="radio" name="to" [(ngModel)]="toBase" value="8"  class="form-check-input"/> Octal</label>
+        <label><input type="radio" name="to" [(ngModel)]="toBase" value="10" class="form-check-input" /> Decimal</label>
+        <label><input type="radio" name="to" [(ngModel)]="toBase" value="16" class="form-check-input" /> Hex</label>
+      </div>
+    </div>
+  
+    <input type="text" [(ngModel)]="inputValue" placeholder="Enter number" />
+    <button  class="btn btn-success" (click)="convert()">Convert</button>
+  
+    <div class="result">
+      <strong>Result:</strong> {{ result }}
+    </div>
+  
+    <div class="actions">
+      <button (click)="copyToClipboard()">Copy</button>
+      <button (click)="clear()">Clear</button>
+    </div>
+  </div>
